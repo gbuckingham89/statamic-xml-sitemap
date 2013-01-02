@@ -1,0 +1,30 @@
+<url>
+	<loc>{{ _site_url }}</loc>
+	<lastmod>2013-01-02</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>1</priority>
+</url>
+{{ nav from="/" include_content="yes"}}
+	<url>
+		<loc>{{ _site_url }}{{ url }}</loc>
+		<lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
+		<changefreq>monthly </changefreq>
+		{{ if sitemap_priority != '' }}
+			<priority>{{ sitemap_priority }}</priority>
+		{{ else }}
+			<priority>0.7</priority>
+		{{ endif }}
+	</url>
+{{ /nav }}
+{{ entries:listing folder="blog" }}
+	<url>
+		<loc>{{ _site_url }}{{ url }}</loc>
+		<lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
+		<changefreq>monthly</changefreq>
+		{{ if sitemap_priority != '' }}
+			<priority>{{ sitemap_priority }}</priority>
+		{{ else }}
+			<priority>0.7</priority>
+		{{ endif }}
+	</url>
+{{ /entries:listing }}
