@@ -1,7 +1,7 @@
 # Statamic XML Sitemap #
 A series of files that can be used to generate an XML sitemap for sites running [Statamic](http://statamic.com/) - a flat file CMS.
 
-Please feel free to use / re-distribute as you wish.
+Developed by [George Buckingham](http://georgebuckingham.com). Please feel free to use / re-distribute as you wish.
 
 ## Installation ##
 Simply copy the files into the relevant directories in your Statamic site structure. Easy!
